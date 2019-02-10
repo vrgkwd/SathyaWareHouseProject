@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+
 @EnableWebMvc //it is Spring WEB MVC AppConfig
 @EnableTransactionManagement // enable commit/rollback
 @Configuration
@@ -24,6 +25,9 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 public class AppConfig {
 	@Autowired
 	private Environment env;
+	
+	@Autowired
+	private HibernateTemplate ht;
 
 	//1. DataSource
 	@Bean
